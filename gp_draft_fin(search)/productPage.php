@@ -19,7 +19,7 @@ if (isset($_GET['product_id'])) {
     echo "No product specified.";
     exit;
 }
-?>
+?> <link href="CSS/productPage.css" rel="stylesheet" />
 
 
 <!DOCTYPE html>
@@ -27,30 +27,75 @@ if (isset($_GET['product_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="CSS/productPage.css" rel="stylesheet" />
+     <!-- bootstrap css link  -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- bootstrap css link  -->
+
+    <!-- font awsome link  -->
+    <script src="https://kit.fontawesome.com/f139cdc8d9.js" crossorigin="anonymous"></script>
+    <!-- font awsome link  -->
+
+    <!-- CSS file link  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS file link  -->
+    
     
     <title><?php echo htmlspecialchars($product['product_title'], ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 <body>
     <div class="container">
         <div class="Header">
-            <nav class="nav">
-                <i class="uil uil-bars navOpenBtn"></i>
-                <a href="#" class="logo">place holder</a>
-                <ul class="nav-links">
-                    <i class="uil uil-times navCloseBtn"></i>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Playstation</a></li>
-                    <li><a href="#">Xbox</a></li>
-                    <li><a href="#">PC</a></li>
-                    <li><a href="#">Bestsellers</a></li>
-                </ul>
-                <i class="uil uil-search search-icon" id="searchIcon"></i>
-                <div class="search-box">
-                    <i class="uil uil-search search-icon"></i>
-                    <input type="text" placeholder="Search here..." />
-                </div>
-            </nav>
+            <!-- Nav bar  -->
+<div class="container-fluid p-0">
+   <!-- first child  --> 
+   <nav class="navbar navbar-expand-lg bg-body-tertiary bg-info">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">LOGO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="diaplay_all.php">Products</a>
+        </li>
+        <?php
+if(!isset($_SESSION['username'])){
+echo "<li class='nav-item'>
+<a class='nav-link' href='./users_area/profile.php'>my account</a>
+</li>";
+}else{
+  echo "<li class='nav-item'>
+<a class='nav-link' href='./users_area/user_registration.php'>Register</a>
+</li>";
+}
+?>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"></i><?php cart_item(); ?></a> <!--- call cart function --->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Total price:<?php total_cart_price(); ?></a>
+        </li>
+      </ul>
+      <!--- note: when you click shearch you are redirected to search product.php and you use a get method to get results --->
+      <form class="d-flex" action="index.php" method="get">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
+       <input type="submit" value="Search" class="btn btn-outline-dark" name="search_data_product">
+      </form>
+      <?php
+    search_product();
+    ?>
+
+    </div>
+  </div>
+</nav>
         </div>
 
         <div class="Game-Display">
@@ -63,6 +108,7 @@ if (isset($_GET['product_id'])) {
             <img id="3img" src="./admin_area/product_images/<?php echo htmlspecialchars($product['product_image4'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($product['product_title'], ENT_QUOTES, 'UTF-8'); ?>">
             <img id="4img" src="./admin_area/product_images/<?php echo htmlspecialchars($product['product_image5'], ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo htmlspecialchars($product['product_title'], ENT_QUOTES, 'UTF-8'); ?>">
         </div>
+
 -->
 
         <div id="text-container" class="Game-Description">
@@ -71,7 +117,7 @@ if (isset($_GET['product_id'])) {
 
         <div class="Buy-the-Product">
             <h2 class="price">£<?php echo htmlspecialchars($product['product_price'], ENT_QUOTES, 'UTF-8'); ?></h2>
-            <button class="button" onclick="addToBasket(<?php echo $product['product_id']; ?>)">Add To Basket</button>
+            <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
         </div>
 
         <div class="Similar-Products"></div>
