@@ -1,0 +1,6 @@
+[16-May-2024 13:20:23 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/rm1469/public_html/new website/users_area/profile.php on line 5
+[16-May-2024 13:20:23 UTC] PHP Warning:  Undefined variable $_SESSION in /home/rm1469/public_html/new website/users_area/profile.php on line 15
+[16-May-2024 13:20:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/rm1469/public_html/new website/users_area/profile.php on line 15
+[16-May-2024 13:20:23 UTC] PHP Warning:  Undefined variable $_SESSION in /home/rm1469/public_html/new website/users_area/profile.php on line 140
+[16-May-2024 13:20:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/rm1469/public_html/new website/users_area/profile.php on line 140
+[16-May-2024 13:20:23 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/rm1469/public_html/new website/users_area/profile.php on line 149

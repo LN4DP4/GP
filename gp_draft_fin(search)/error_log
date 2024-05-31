@@ -1,0 +1,49 @@
+[16-May-2024 12:52:50 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/rm1469/public_html/new website/includes/connect.php on line 5
+[16-May-2024 12:52:50 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_error(): Argument #1 ($mysql) must be of type mysqli, bool given in /home/rm1469/public_html/new website/includes/connect.php:7
+Stack trace:
+#0 /home/rm1469/public_html/new website/includes/connect.php(7): mysqli_error(false)
+#1 /home/rm1469/public_html/new website/index.php(3): include('/home/rm1469/pu...')
+#2 {main}
+  thrown in /home/rm1469/public_html/new website/includes/connect.php on line 7
+[16-May-2024 12:53:30 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/rm1469/public_html/new website/index.php on line 5
+[16-May-2024 12:53:30 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/rm1469/public_html/new website/functions/common_function.php:244
+Stack trace:
+#0 /home/rm1469/public_html/new website/functions/common_function.php(244): mysqli_fetch_array(false)
+#1 /home/rm1469/public_html/new website/index.php(73): total_cart_price()
+#2 {main}
+  thrown in /home/rm1469/public_html/new website/functions/common_function.php on line 244
+[16-May-2024 12:53:44 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/rm1469/public_html/new website/index.php on line 5
+[16-May-2024 12:53:44 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/rm1469/public_html/new website/functions/common_function.php:244
+Stack trace:
+#0 /home/rm1469/public_html/new website/functions/common_function.php(244): mysqli_fetch_array(false)
+#1 /home/rm1469/public_html/new website/index.php(73): total_cart_price()
+#2 {main}
+  thrown in /home/rm1469/public_html/new website/functions/common_function.php on line 244
+[16-May-2024 12:53:46 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/rm1469/public_html/new website/index.php on line 5
+[16-May-2024 12:53:46 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/rm1469/public_html/new website/functions/common_function.php:244
+Stack trace:
+#0 /home/rm1469/public_html/new website/functions/common_function.php(244): mysqli_fetch_array(false)
+#1 /home/rm1469/public_html/new website/index.php(73): total_cart_price()
+#2 {main}
+  thrown in /home/rm1469/public_html/new website/functions/common_function.php on line 244
+[16-May-2024 12:54:13 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/rm1469/public_html/new website/functions/common_function.php:244
+Stack trace:
+#0 /home/rm1469/public_html/new website/functions/common_function.php(244): mysqli_fetch_array(false)
+#1 /home/rm1469/public_html/new website/index.php(72): total_cart_price()
+#2 {main}
+  thrown in /home/rm1469/public_html/new website/functions/common_function.php on line 244
+[16-May-2024 12:57:30 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_array(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/rm1469/public_html/new website/functions/common_function.php:244
+Stack trace:
+#0 /home/rm1469/public_html/new website/functions/common_function.php(244): mysqli_fetch_array(false)
+#1 /home/rm1469/public_html/new website/index.php(72): total_cart_price()
+#2 {main}
+  thrown in /home/rm1469/public_html/new website/functions/common_function.php on line 244
+[16-May-2024 13:02:29 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/rm1469/public_html/new website/search_product.php on line 5
+[16-May-2024 13:02:47 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/rm1469/public_html/new website/search_product.php on line 5
+[16-May-2024 13:14:05 UTC] PHP Parse error:  syntax error, unexpected identifier "flex", expecting "," or ";" in /home/rm1469/public_html/new website/functions/common_function.php on line 33
+[16-May-2024 13:20:49 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/rm1469/public_html/new website/cart.php on line 5
+[16-May-2024 13:21:01 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/rm1469/public_html/new website/cart.php on line 5
+[16-May-2024 13:21:01 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: float * string in /home/rm1469/public_html/new website/cart.php:172
+Stack trace:
+#0 {main}
+  thrown in /home/rm1469/public_html/new website/cart.php on line 172
